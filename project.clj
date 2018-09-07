@@ -1,15 +1,18 @@
-(defproject phrase "0.4-SNAPSHOT"
+(defproject phrase "0.4-zimpler1"
   :description "Clojure(Script) library for phrasing spec problems."
   :url "https://github.com/alexanderkiel/phrase"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
 
+  :repositories [["private" {:url "s3p://clojars.zimpler.com/releases/" :no-auth true}]]
+
   :min-lein-version "2.6.0"
-  :pedantic? :abort
+  ;;:pedantic? :abort
 
   :plugins [[lein-cljsbuild "1.1.7"]
             [lein-doo "0.1.10" :exclusions [org.clojure/clojure]]
-            [lein-tach "1.0.0"]]
+            [lein-tach "1.0.0"]
+            [s3-wagon-private "1.3.2"]]
 
   :dependencies
   [[org.clojure/spec.alpha "0.2.168"]]
